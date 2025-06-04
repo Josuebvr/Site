@@ -1,192 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Josué Rios - Portfólio Profissional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Portfólio de Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --roxo: #5c2d91;
-      --preto: #121212;
-      --branco: #ffffff;
-      --cinza: #cccccc;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Montserrat', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
       scroll-behavior: smooth;
     }
-
-    body {
-      background-color: var(--preto);
-      color: var(--branco);
-      line-height: 1.6;
-    }
-
     header {
-      background-color: var(--roxo);
+      background-color: #1a1a1a;
       padding: 2rem;
       text-align: center;
       animation: fadeInDown 1s ease;
     }
-
     header h1 {
+      color: #a259ff;
       font-size: 2.5rem;
     }
-
     nav {
       margin-top: 1rem;
     }
-
     nav a {
-      color: var(--branco);
-      text-decoration: none;
+      color: #ccc;
       margin: 0 1rem;
-      transition: color 0.3s;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
-
     nav a:hover {
-      color: var(--cinza);
+      color: #a259ff;
     }
-
     section {
       padding: 4rem 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
-      animation: fadeIn 1.2s ease;
     }
-
-    .experiencia, .galeria {
-      margin-top: 2rem;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .projeto {
-      background-color: #1f1f1f;
-      padding: 1rem;
-      border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .projeto:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    }
-
-    .projeto img {
-      max-width: 100%;
-      border-radius: 4px;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      padding: 2rem;
+    .intro {
       text-align: center;
+      animation: fadeInUp 1.2s ease;
     }
-
-    .social a {
-      color: var(--branco);
-      margin: 0 0.5rem;
-      font-size: 1.4rem;
-      transition: transform 0.3s;
+    .intro p {
+      max-width: 700px;
+      margin: auto;
+      margin-top: 1rem;
+      color: #ccc;
     }
-
-    .social a:hover {
-      transform: scale(1.2);
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
-
+    .gallery-item {
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+    .gallery-item .desc {
+      padding: 1rem;
+      color: #ccc;
+    }
+    .socials {
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .socials a {
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      color: #ccc;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .socials a:hover {
+      color: #a259ff;
+      transform: scale(1.1);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #777;
+    }
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <header>
-    <h1>Josué Rios</h1>
-    <p>Head de Marketing | Lubrificador Industrial</p>
+    <h1>Lorem Ipsum Marketing</h1>
     <nav>
       <a href="#sobre">Sobre</a>
-      <a href="#experiencia">Experiências</a>
-      <a href="#portfolio">Portfólio</a>
+      <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>
-      Sou Josué Rios, profissional com experiência em marketing estratégico, atuação como Head de Marketing na Indica Investimentos e expert em lubrificação industrial pela Lubrifique. Combinando criatividade e análise, entrego resultados tangíveis e inovadores.
-    </p>
+  <section class="intro" id="sobre">
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
   </section>
 
-  <section id="experiencia">
-    <h2>Experiências Profissionais</h2>
-    <div class="experiencia">
-      <h3>Indica Investimentos</h3>
-      <p>Head de Marketing (2024 - atual)</p>
-      <p>Responsável por liderar a estratégia de comunicação, branding, campanhas digitais e crescimento orgânico.</p>
+  <section class="gallery" id="projetos">
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/600x400/333/fff?text=Projeto+1" alt="Projeto 1">
+      <div class="desc">Lorem ipsum dolor sit amet.</div>
     </div>
-    <div class="experiencia">
-      <h3>Lubrifique</h3>
-      <p>Técnico em Lubrificação Industrial (2022 - atual)</p>
-      <p>Atuação direta em processos industriais com foco em eficiência operacional e manutenção preventiva.</p>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/600x400/444/fff?text=Projeto+2" alt="Projeto 2">
+      <div class="desc">Consectetur adipiscing elit.</div>
     </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>Projetos de Marketing</h2>
-    <div class="galeria">
-      <div class="projeto">
-        <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
-        <h4>Campanha de Investimentos 2024</h4>
-        <p>Campanha digital para aquisição de leads qualificados.</p>
-      </div>
-      <div class="projeto">
-        <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
-        <h4>Branding Institucional</h4>
-        <p>Reposicionamento de marca e identidade visual da Indica.</p>
-      </div>
-      <div class="projeto">
-        <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
-        <h4>SEO & Performance</h4>
-        <p>Estruturação de SEO técnico e estratégias de crescimento orgânico.</p>
-      </div>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/600x400/555/fff?text=Projeto+3" alt="Projeto 3">
+      <div class="desc">Sed do eiusmod tempor incididunt.</div>
     </div>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Vamos conversar sobre oportunidades e colaborações!</p>
-    <p>Email: <a href="mailto:josue@email.com">josue@email.com</a></p>
+  <section class="socials" id="contato">
+    <h2>Conecte-se</h2>
+    <a href="#" target="_blank">🔗 LinkedIn</a>
+    <a href="#" target="_blank">📸 Instagram</a>
+    <a href="#" target="_blank">🐦 Twitter</a>
   </section>
 
   <footer>
-    <div class="social">
-      <a href="https://linkedin.com/in/seuperfil" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://instagram.com/seuperfil" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:josue@email.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p>&copy; 2025 Josué Rios. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Lorem Ipsum Marketing. Todos os direitos reservados.</p>
   </footer>
 </body>
-
 </html>
