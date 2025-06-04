@@ -1,187 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Josué Rios | Portfólio de Marketing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Josué Rios - Portfólio Profissional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --roxo: #5c2d91;
+      --preto: #121212;
+      --branco: #ffffff;
+      --cinza: #cccccc;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
-      background-color: #f7f7f7;
-      color: #333;
+      background-color: var(--preto);
+      color: var(--branco);
+      line-height: 1.6;
     }
 
     header {
-      background: #111;
-      color: #fff;
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background-color: var(--roxo);
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease;
     }
 
     header h1 {
-      font-size: 28px;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
     }
 
     nav a {
-      color: #fff;
+      color: var(--branco);
       text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
+      margin: 0 1rem;
+      transition: color 0.3s;
     }
 
-    .hero {
-      padding: 100px 50px;
-      background: linear-gradient(to right, #1a1a1a, #333);
-      color: white;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: 0 auto;
+    nav a:hover {
+      color: var(--cinza);
     }
 
     section {
-      padding: 80px 50px;
-    }
-
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .about,
-    .services,
-    .portfolio,
-    .contact {
+      padding: 4rem 2rem;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
+      animation: fadeIn 1.2s ease;
     }
 
-    .services-grid,
-    .portfolio-grid {
+    .experiencia, .galeria {
+      margin-top: 2rem;
+    }
+
+    .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    .card {
-      background: white;
-      padding: 30px;
+    .projeto {
+      background-color: #1f1f1f;
+      padding: 1rem;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
+    .projeto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .projeto img {
+      max-width: 100%;
+      border-radius: 4px;
     }
 
     footer {
-      background: #111;
-      color: white;
+      background-color: #1a1a1a;
+      padding: 2rem;
       text-align: center;
-      padding: 30px;
     }
 
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
+    .social a {
+      color: var(--branco);
+      margin: 0 0.5rem;
+      font-size: 1.4rem;
+      transition: transform 0.3s;
+    }
 
-      nav {
-        margin-top: 10px;
-      }
+    .social a:hover {
+      transform: scale(1.2);
+    }
 
-      .hero h2 {
-        font-size: 36px;
-      }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
 
+<body>
   <header>
     <h1>Josué Rios</h1>
+    <p>Head de Marketing | Lubrificador Industrial</p>
     <nav>
       <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#experiencia">Experiências</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Marketing que Gera Resultados</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum est in nulla lacinia, non fermentum sapien pharetra.</p>
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>
+      Sou Josué Rios, profissional com experiência em marketing estratégico, atuação como Head de Marketing na Indica Investimentos e expert em lubrificação industrial pela Lubrifique. Combinando criatividade e análise, entrego resultados tangíveis e inovadores.
+    </p>
   </section>
 
-  <section id="sobre" class="about">
-    <h2 class="section-title">Sobre Mim</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, sapien nec malesuada facilisis, velit metus sodales nisi, ac viverra massa justo at elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  <section id="experiencia">
+    <h2>Experiências Profissionais</h2>
+    <div class="experiencia">
+      <h3>Indica Investimentos</h3>
+      <p>Head de Marketing (2024 - atual)</p>
+      <p>Responsável por liderar a estratégia de comunicação, branding, campanhas digitais e crescimento orgânico.</p>
+    </div>
+    <div class="experiencia">
+      <h3>Lubrifique</h3>
+      <p>Técnico em Lubrificação Industrial (2022 - atual)</p>
+      <p>Atuação direta em processos industriais com foco em eficiência operacional e manutenção preventiva.</p>
+    </div>
   </section>
 
-  <section id="servicos" class="services">
-    <h2 class="section-title">Serviços</h2>
-    <div class="services-grid">
-      <div class="card">
-        <h3>Gestão de Tráfego</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit nec nulla dictum lacinia.</p>
+  <section id="portfolio">
+    <h2>Projetos de Marketing</h2>
+    <div class="galeria">
+      <div class="projeto">
+        <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+        <h4>Campanha de Investimentos 2024</h4>
+        <p>Campanha digital para aquisição de leads qualificados.</p>
       </div>
-      <div class="card">
-        <h3>Social Media</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit nec nulla dictum lacinia.</p>
+      <div class="projeto">
+        <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+        <h4>Branding Institucional</h4>
+        <p>Reposicionamento de marca e identidade visual da Indica.</p>
       </div>
-      <div class="card">
-        <h3>Branding</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae elit nec nulla dictum lacinia.</p>
+      <div class="projeto">
+        <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+        <h4>SEO & Performance</h4>
+        <p>Estruturação de SEO técnico e estratégias de crescimento orgânico.</p>
       </div>
     </div>
   </section>
 
-  <section id="portfolio" class="portfolio">
-    <h2 class="section-title">Portfólio</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <h3>Campanha X</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="card">
-        <h3>Projeto Y</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="card">
-        <h3>Identidade Visual Z</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="contact">
-    <h2 class="section-title">Entre em Contato</h2>
-    <p style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Email: contato@josuerios.com.br</p>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Vamos conversar sobre oportunidades e colaborações!</p>
+    <p>Email: <a href="mailto:josue@email.com">josue@email.com</a></p>
   </section>
 
   <footer>
+    <div class="social">
+      <a href="https://linkedin.com/in/seuperfil" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/seuperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:josue@email.com"><i class="fas fa-envelope"></i></a>
+    </div>
     <p>&copy; 2025 Josué Rios. Todos os direitos reservados.</p>
   </footer>
-
 </body>
+
 </html>
